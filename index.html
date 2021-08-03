@@ -12,6 +12,26 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!--============ NavBar ============-->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+        <div class="navigation__background"></div>
+        
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
+                <li class="navigation__item"><a href="#"  class="navigation__link">Our Skills</a></li>
+                <li class="navigation__item"><a href="#" 
+                class="navigation__link">Our courses</a></li>
+                <li class="navigation__item"><a href="#"  class="navigation__link">Testimonials</a></li>
+                <li class="navigation__item"><a href="#"  class="navigation__link">Enroll form</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--============ Header ============-->
     <header  class="header">
         <div class="header__logo-box">
             <img src="./images/logo.png" class="header__logo" alt="header__logo">          
@@ -28,6 +48,7 @@
             <a href="#" class="btn btn--white btn--animated">See our courses</a>
         </div>
     </header>
+
     <!-- <div class="grid-test">
         <div class="row">
             <div class="col-1-of-2">
@@ -90,7 +111,9 @@
             </div>
         </div>
     </div> -->
+    
     <main>
+        <!--============ About ============-->
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -132,12 +155,13 @@
                     </div>
             </div>
         </section>
+        <!--============ Skills ============-->
         <section class="section-skills">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="skill-box">
                         <i class="skill-box__icon fas fa-globe-asia"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">global skill</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small no-wraptext">global skill</h3>
                         <div class="skill-box__text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit, Neque, quas
                             doloribus corporis debitis soluta atque.
@@ -147,7 +171,7 @@
                 <div class="col-1-of-4">
                     <div class="skill-box">
                         <i class=" skill-box__icon fas fa-book-open"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">google's knowledge</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small no-wraptext">google's knowledge</h3>
                         <div class="skill-box__text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit, Neque, quas
                             doloribus corporis debitis soluta atque.
@@ -157,7 +181,7 @@
                 <div class="col-1-of-4">
                     <div class="skill-box">
                         <i class=" skill-box__icon fas fa-users"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">leader of your life</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small no-wraptext">leader of your life</h3>
                         <div class="skill-box__text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit, Neque, quas
                             doloribus corporis debitis soluta atque.
@@ -167,7 +191,7 @@
                 <div class="col-1-of-4">
                     <div class="skill-box">
                         <i class=" skill-box__icon fas fa-hourglass-half"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">saving your time</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small no-wraptext">saving your time</h3>
                         <div class="skill-box__text">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit, Neque, quas
                             doloribus corporis debitis soluta atque.
@@ -176,6 +200,7 @@
                 </div>
             </div>
         </section>
+        <!--============ Courses ============-->
         <section class="section-courses" id="section-courses">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -187,13 +212,13 @@
                     <div class="card">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--1">
-                                &nbsp;   <!--- KÍ TỰ RỖNG TRONG HTML -->
+                                <!-- &nbsp;   - KÍ TỰ RỖNG TRONG HTML -->
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">
+                                        Control <br> your time
+                                    </span>
+                                </h4>
                             </div>
-                            <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--1">
-                                    Control <br> your time
-                                </span>
-                            </h4>
                             <div class="card__details">
                                 <ul>
                                     <li>3 hours</li>
@@ -211,7 +236,7 @@
                                     <p class="card__price-value">
                                         $16
                                     </p>
-                                    <a href="/redirect?Id=t4QpedsZQSbEiPHWVWFQSQ%3d%3d" class="btn btn--white">Enroll now</a>
+                                    <a href="#popup" class="btn btn--white">Enroll now</a>
                                 </div>
                             </div>
                         </div>      
@@ -221,13 +246,12 @@
                     <div class="card">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--2">
-                                 &nbsp;
+                                 <h4 class="card__heading">
+                                     <span class="card__heading-span card__heading-span--2">
+                                         make <br> mindmap
+                                     </span>
+                                 </h4>
                             </div>
-                            <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--2">
-                                    make <br> mindmap
-                                </span>
-                            </h4>
                             <div class="card__details">
                                 <ul>
                                     <li>10 hours</li>
@@ -245,7 +269,7 @@
                                     <p class="card__price-value">
                                         $16
                                     </p>
-                                    <a href="/redirect?Id=t4QpedsZQSbEiPHWVWFQSQ%3d%3d" class="btn btn--white">Enroll now</a>
+                                    <a href="#popup" class="btn btn--white">Enroll now</a>
                                 </div>
                             </div>
                         </div>      
@@ -254,14 +278,13 @@
                 <div class="col-1-of-3">
                     <div class="card">
                         <div class="card__side card__side--front">
-                            <div class="card__picture card__picture--3">
-                                &nbsp;
+                            <div class="card__picture card__picture--3">    
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">
+                                        make<br> your target
+                                    </span>
+                                </h4>
                             </div>
-                            <h4 class="card__heading">
-                                <span class="card__heading-span card__heading-span--3">
-                                    make<br> your target
-                                </span>
-                            </h4>
                             <div class="card__details">
                                 <ul>
                                     <li>15 hours</li>
@@ -279,7 +302,7 @@
                                     <p class="card__price-value">
                                         $16
                                     </p>
-                                    <a href="/redirect?Id=t4QpedsZQSbEiPHWVWFQSQ%3d%3d" class="btn btn--white">Enroll now</a>
+                                    <a href="#popup" class="btn btn--white">Enroll now</a>
                                 </div>
                             </div>
                         </div>                            
@@ -291,7 +314,169 @@
                 <a href="/redirect?Id=8PbzEa1t5qA%2fxnPzl6pMfg%3d%3d" class="btn btn--blue">See all our courses</a>
             </div>
         </section>
+        <!--============ Testimonials ============-->        
+        <section class="section-testimonials">
+            <!-- bg video -->
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="./images/Boulevard.mp4" type="video/mp4">
+                    <!-- <source src="img/Boulevard.webm" type="video/webm"> -->
+                   Your browser is not supported
+                </video>
+            </div>
 
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    testimonials
+                </h2>
+            </div>
+            <div class="row">
+                <div class="testimonial">
+                    <figure class="testimonial__shape">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="testimonial__img" alt="photo1">
+                        <figcaption class="testimonial__caption">
+                            Lionel Meshi
+                        </figcaption>
+                    </figure>
+                    <div class="testimonial__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            thank for your guide
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Incidunt repellat tenetur officia quis quasi,
+                            temporibus neque reiciendis quaerat exercitationem quibusdam?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Possimus dolorem labore nam?
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <figure class="testimonial__shape">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="testimonial__img" alt="photo1">
+                        <figcaption class="testimonial__caption">
+                            Lionel Meshi
+                        </figcaption>
+                    </figure>
+                    <div class="testimonial__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            thank for your guide
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Incidunt repellat tenetur officia quis quasi,
+                            temporibus neque reiciendis quaerat exercitationem quibusdam?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Possimus dolorem labore nam?
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="u-center-text u-margin-top-big u-margin-bottom-big text-uppercase">
+                <a href="#" class="btn-text">read all the testimonials &rarr;</a>
+            </div>
+        </section>
+        <!--============ Enroll ============-->
+        <section class="section-enroll">
+            <div class="row">
+                <div class="enroll">
+                    <div class="enroll__form">
+                        <form class="form">
+                            <div>
+                                <h2 class="heading-secondary">
+                                    enroll now
+                                </h2>
+                            </div>
+                            <div class="form__group">
+                                <input id="name" type="text" class="form__input" placeholder="Full name" required>
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+                            <div class="form__group">
+                                <input id="email" type="email" class="form__input" placeholder="Email" required>
+                                <label for="email" class="form__label">Email</label>
+                            </div>
+                            <div class="form__group">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="male" name="gender">
+                                    <label for="male" class="form__radio-label">
+                                       <span class="form__radio-button"></span>
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="female" name="gender">
+                                    <label for="female" class="form__radio-label">
+                                        <span class="form__radio-button"></span>   
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <a href="#" class="btn btn--blue">
+                                    Submit &rarr;
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============ Footer ============-->
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img src="./images/logo2.png" class="footer__logo">
+                <h3 class="heading-secondary footer__title">
+                    SelfTaught
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="/redirect?Id=8PbzEa1t5qA%2fxnPzl6pMfg%3d%3d" class="footer__link">Address</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="/redirect?Id=8PbzEa1t5qA%2fxnPzl6pMfg%3d%3d" class="footer__link">Contacts</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="/redirect?Id=8PbzEa1t5qA%2fxnPzl6pMfg%3d%3d" class="footer__link">Policy</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="/redirect?Id=8PbzEa1t5qA%2fxnPzl6pMfg%3d%3d" class="footer__link">Sponsors</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Copyright &copy; by Selftaught Team. You are 100% allowed to use this webpages for both personal and commercial use, but NOT to claim it as your personal design.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!--============ Popup ============-->
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Tour photo" class="popup__img">
+                    <img src="https://images.unsplash.com/photo-1497206365907-f5e630693df0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-courses" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Enroll now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking.</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, ratione dolorum? 
+                        Dicta quam voluptas ipsum obcaecati laborum mollitia distinctio. Earum quisquam 
+                        esse est vel aperiam quis quidem commodi voluptatem voluptatum! Magnam quod quis 
+                        sed fugiat quas. At vel dolorem, officia, rerum tenetur aspernatur, itaque maiores laudantium voluptas 
+                        assumenda reiciendis nemo!
+                    </p>
+                    <a href="#" class="btn btn--blue">Enroll now</a>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

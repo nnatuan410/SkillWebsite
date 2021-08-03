@@ -3,6 +3,15 @@
     padding: 35rem 0 35rem;
     margin-top: -35rem;
     margin-bottom: -10rem;
+    @include respond(tab-port){
+        margin-bottom: -30rem;
+        padding-bottom: 40rem;
+    }
+    @include respond(phone){
+        margin-top: -60rem;
+        padding-top: 35rem;
+        padding-bottom: 40rem;
+    }
 }
 .section-skills{
     padding: 20rem 0;
@@ -13,10 +22,61 @@
     background-size: cover;
     position: relative;
     clip-path: ellipse(70% 50% at 50% 50%);
+    
 }
 .section-courses{
     background-color: $color-grey-light-1;
     padding: 25rem 0 10rem 0;
     margin-top: -20rem;
 }
+.section-testimonials{
+    position: relative;
+    padding: 5rem 0;
+}
+.section-enroll{
+    padding: 10rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+.enroll {
+    background-image: 
+     radial-gradient(
+        150% 200% ellipse at -15%,
+        rgba($color-white, .8) 50%,
+        transparent 50%),
+        url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    border-radius: 5rem;
+    height: 50rem;
 
+    @include respond(tab-land){
+        background-image: 
+        radial-gradient( 150% 200% ellipse at -15%, 
+            rgba($color-white, .8) 0%,
+            rgba($color-white, .8) 65%,
+            transparent 35%),
+        url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    }
+
+    @include respond(tab-port){
+        background-image: 
+        linear-gradient( to right, 
+            rgba($color-white, .8) 0%,
+            rgba($color-white, .8) 100%),
+        url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    }
+
+    &__form{
+        padding: 5rem;
+        width: 50%;
+        
+        @include respond(tab-land){
+            width: 65%;
+        }
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+   
+
+}

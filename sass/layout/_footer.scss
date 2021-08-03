@@ -1,0 +1,74 @@
+.footer{
+    background-color: $color-grey-dark-1;
+    color: $color-grey-light-1;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 8rem;
+   }
+    &__logo{
+        width: 20rem;
+        height: auto;
+    }
+    &__title{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        color: $color-primary;
+    }
+
+    &__navigation{
+        border-top: 1px solid $color-grey-light-1;
+        padding-top: 2rem;
+        display: inline-block;
+        @include respond(tab-port){
+            display: block;
+        }
+    }
+    &__list{
+        list-style: none;
+        @include respond(tab-port){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__item{
+        display: inline-block;
+
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+    &__link{
+        transition: all .45s;
+        &:link,
+        &:visited{
+            color: $color-grey-light-1;
+            background-color: $color-grey-dark-1;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5rem;
+        }
+        &:hover,
+        &:active{
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.05);
+        }
+    }
+
+    &__copyright{
+        border-top: 1px solid $color-grey-light-1;
+        padding-top: 2rem;
+        width: 70%;
+        float: right;
+        @include respond(tab-port){
+            display: block;
+            width: 100%;
+            border-top: none;
+            text-align: center;
+        }
+    }
+}

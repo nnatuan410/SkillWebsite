@@ -18,12 +18,24 @@
     }
 
     &__logo {
-        height: 7rem;
+        height: 10rem;
+        @include respond(phone){
+            height: 15rem;
+        }
     }
 
     &__logo-box {
         position: absolute;
         top: 3rem;
         left: 3rem;
+    }
+    @include respond(phone){
+        clip-path: ellipse(60% 50% at 50% 20%);
+    }
+
+    @media (min-resolution: 192dpi) and (max-width: 900px){
+        background-image:
+        linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+        url('https://images.unsplash.com/photo-1621609764095-b32bbe35cf3a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
     }
 }

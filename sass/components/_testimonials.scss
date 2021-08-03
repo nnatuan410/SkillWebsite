@@ -1,0 +1,56 @@
+.testimonial{
+    width: 80%;
+    margin:  0 auto 5rem;
+    padding: 5rem;
+    font-size: $default-font-size;
+    box-shadow: 0 3rem 5rem rgba($color-black, .15);
+    border-radius: 100rem;
+    background-color: rgba($color-white, .1);
+    cursor: pointer;
+    @include respond(tab-port){
+        width: 140%;
+        margin-left: -20%;
+    }
+
+    @include respond(phone){
+        width: 100%;
+        margin-left: auto;
+    }
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-2rem);
+        margin-top: -1rem;  
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+  
+    }
+    &__img{
+        width: 100%;
+        transition: all .5s;
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+
+    }
+    &:hover &__img{
+        transform: scale(1.2);
+        filter: blur(.5rem) brightness(80%);
+
+    }
+}

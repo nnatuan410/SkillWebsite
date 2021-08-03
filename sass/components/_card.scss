@@ -2,6 +2,9 @@
     position: relative;
     perspective: 150rem;
     height: 45rem;
+    @include respond(tab-port){
+        height: auto;
+    }
     &__picture{
         background-size: cover;
         height: 23rem;
@@ -65,8 +68,13 @@
         overflow: hidden;
 
         backface-visibility: hidden;
+        @include respond(tab-port){
+            border-radius: 5rem 5rem 0rem 0rem;
+            position: relative;
+        }
         &--front{
             background-color: $color-white;
+            
         }
 
         &--back{
@@ -83,10 +91,17 @@
             &-3 {
             background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
             }
+            @include respond(tab-port){
+                transform: rotateY(0);
+                border-radius: 0rem 0rem 5rem 5rem;
+            }
         }
     }
     &:hover &__side--front{
         transform: rotateY(-180deg);
+        @include respond(tab-port){
+            transform: rotateY(0);
+        }
     }
 
     &:hover &__side--back{ 
@@ -99,7 +114,7 @@
         text-transform: uppercase;
         color: $color-white;
         position: absolute;
-        top: 12rem;
+        top: 11rem;
         right: 2rem;
         width: 75%;
         &-span{
@@ -147,7 +162,7 @@
             }
         }
     }
-    
+
 }
 
  
